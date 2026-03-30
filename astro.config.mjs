@@ -1,9 +1,6 @@
 import { defineConfig } from 'astro/config';
 
-import cloudflare from "@astrojs/cloudflare";
-
 export default defineConfig({
-  output: "hybrid",
+  output: 'static',
   site: 'https://greatindiancompany.com',
-  adapter: cloudflare()
 });
