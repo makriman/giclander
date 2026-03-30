@@ -82,10 +82,10 @@ The build also generates:
 ## Blog System
 
 - English blog index: `/blog`
-- English article route: `/blog/<slug>`
+- Article route (all languages): `/blog/<slug>`
 - Current published master count target: `800`
 - Translation corpus: `17,600` markdown files across `22` Indian languages
-- Translation files are stored under `content-automation/generated-translations/*` so static builds stay memory-safe.
+- Translation files are stored under `content-automation/generated-translations/*` and rendered as live static routes during build.
 
 ### Generation Commands
 
