@@ -1,0 +1,37 @@
+---
+id: "gic-20260330-502-ks"
+lang: "ks"
+translationOf: "gic-20260330-502"
+title: "[Kashmiri] Energy Transition In India: Mid Term Trajectory (502)"
+description: "Kashmiri edition of Energy Transition In India: Mid Term Trajectory (502)."
+slug: "energy-transition-mid-term-trajectory-dea-gov-20260330-502-ks"
+publishDate: "2026-03-30"
+updatedDate: "2026-03-30"
+tags:
+  - "energy-transition"
+  - "mid-term-trajectory"
+  - "india-briefs"
+  - "diverse-sources"
+sourceLinks:
+  - "https://dea.gov.in/"
+  - "https://www.societegenerale.com/en/news"
+summaryType: "india-brief"
+draft: false
+---
+
+# [کٲشُر] Energy Transition In India: Mid Term Trajectory (502)
+
+## Localized Brief (Kashmiri)
+
+This localized edition preserves the meaning and source references of the English master brief.
+
+## Core Notes
+
+- The central thesis follows the master article.
+- Source links are identical for verification.
+- This page supports regional discovery and multilingual access.
+
+## Source Links
+
+- https://dea.gov.in/
+- https://www.societegenerale.com/en/news
