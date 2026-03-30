@@ -1,0 +1,26 @@
+{
+  "clusters": [
+    "rbi-monetary-policy",
+    "rbi-liquidity",
+    "banking-regulation",
+    "inflation-trends",
+    "credit-growth",
+    "digital-payments",
+    "financial-inclusion",
+    "state-finance",
+    "trade-and-fx",
+    "employment-and-skills"
+  ],
+  "angles": [
+    "what-changed",
+    "key-numbers",
+    "impact-on-smes",
+    "impact-on-households",
+    "long-term-trend",
+    "policy-explainer",
+    "regional-view",
+    "risk-watch",
+    "global-context",
+    "action-checklist"
+  ]
+}

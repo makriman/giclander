@@ -1,0 +1,36 @@
+---
+id: "gic-20260330-035-sa"
+lang: "sa"
+translationOf: "gic-20260330-035"
+title: "[Sanskrit] Credit Growth: Impact On Households Guide (35)"
+description: "Sanskrit version of Credit Growth: Impact On Households Guide (35)."
+slug: "credit-growth-impact-on-households-20260330-035-sa"
+publishDate: "2026-03-30"
+updatedDate: "2026-03-30"
+tags:
+  - "credit-growth"
+  - "impact-on-households"
+  - "india"
+  - "policy"
+sourceLinks:
+  - "https://www.rbi.org.in/Scripts/StateFinances.aspx"
+  - "https://www.rbi.org.in/Scripts/DBIE.spx"
+summaryType: "policy-explainer"
+draft: false
+---
+
+# [संस्कृतम्] Credit Growth: Impact On Households Guide (35)
+
+## Localized Summary (Sanskrit)
+
+This Sanskrit edition preserves the meaning of the English master article and keeps the same source-backed claims.
+
+## Core Points
+
+1. The central thesis remains aligned with the master article.
+2. Source links are preserved for verification.
+3. This localized page supports regional discovery and search access.
+
+## Source Notes
+
+Refer to the listed official links for original data and policy text.

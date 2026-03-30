@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "content:run": "node content-automation/scripts/run-content-pipeline.mjs"
   },
   "dependencies": {
     "astro": "^4.0.0"
