@@ -40,6 +40,19 @@ async function countTranslationFiles(root: string) {
 }
 
 const translationCount = await countTranslationFiles(TRANSLATION_ROOT);
+const latestDate = posts[0]?.data.publishDate ?? '';
+
+const tagFrequency = new Map<string, number>();
+for (const post of posts) {
+  for (const tag of post.data.tags) {
+    tagFrequency.set(tag, (tagFrequency.get(tag) || 0) + 1);
+  }
+}
+
+const topTags = [...tagFrequency.entries()]
+  .sort((a, b) => b[1] - a[1])
+  .slice(0, 12)
+  .map(([tag]) => tag);
 ---
 
 <BlogLayout
@@ -47,25 +60,230 @@ const translationCount = await countTranslationFiles(TRANSLATION_ROOT);
   description="Research summaries and explainers based on Indian policy and economic sources."
   canonical="https://greatindiancompany.com/blog"
 >
-  <section class="card">
-    <h1>Insights</h1>
-    <p class="meta">{posts.length} published English articles</p>
-    <p class="meta">{translationCount} published translation articles across 22 languages</p>
-    <p class="meta">
-      Sitemap: <a href="/sitemap-index.xml">/sitemap-index.xml</a>
+  <section class="card hero">
+    <p class="eyebrow">India Briefing Engine</p>
+    <h1>Policy, Markets, Infrastructure, and Execution Signals in One Place</h1>
+    <p class="hero-copy">
+      This desk tracks structural shifts across India and translates them into operator- and investor-ready
+      briefs. Every page links back to source documents so readers can verify fast.
     </p>
 
-    <ul style="list-style:none; padding:0; margin:1rem 0 0; display:grid; gap:0.9rem;">
-      {
-        posts.map((post) => (
-          <li style="border:1px solid #2d2d2d; border-radius:12px; padding:1rem; background:#111;">
-            <a href={`/blog/${post.data.slug}`} style="font-size:1.03rem; font-weight:600;">
-              {post.data.title}
-            </a>
-            <p style="margin:0.45rem 0 0; color:#bdbdbd;">{post.data.description}</p>
-          </li>
-        ))
-      }
-    </ul>
+    <div class="stats">
+      <article class="stat">
+        <p class="label">English Masters</p>
+        <p class="value">{posts.length}</p>
+      </article>
+      <article class="stat">
+        <p class="label">Language Variants</p>
+        <p class="value">{translationCount}</p>
+      </article>
+      <article class="stat">
+        <p class="label">Latest Publish Date</p>
+        <p class="value">{latestDate || '—'}</p>
+      </article>
+    </div>
   </section>
+
+  <section class="card topics">
+    <h2>Top Themes</h2>
+    <div class="chips">
+      {topTags.map((tag) => <span class="tag">{tag}</span>)}
+    </div>
+  </section>
+
+  <section class="list-head">
+    <h2>All Briefs</h2>
+    <p class="meta">
+      Sorted newest-first. For crawlers and tooling, use <a href="/sitemap-index.xml">sitemap-index.xml</a>.
+    </p>
+  </section>
+
+  <ul class="post-grid">
+    {
+      posts.map((post) => (
+        <li class="post-card">
+          <div class="post-top">
+            <p class="post-date">{post.data.publishDate}</p>
+            <div class="post-tags">
+              {post.data.tags.slice(0, 3).map((tag) => <span class="tag">{tag}</span>)}
+            </div>
+          </div>
+          <a href={`/blog/${post.data.slug}`} class="post-title">
+            {post.data.title}
+          </a>
+          <p class="post-desc">{post.data.description}</p>
+          <a href={`/blog/${post.data.slug}`} class="post-cta">Read Brief</a>
+        </li>
+      ))
+    }
+  </ul>
+
+  <style>
+    .hero {
+      display: grid;
+      gap: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .eyebrow {
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      font-size: 0.72rem;
+      color: #8b6d4e;
+      font-weight: 700;
+    }
+
+    .hero-copy {
+      margin: 0;
+      color: #574b3e;
+      max-width: 66ch;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.8rem;
+    }
+
+    .stat {
+      border: 1px solid #dcc9ad;
+      background: #fffbf2;
+      border-radius: 0.95rem;
+      padding: 0.7rem 0.85rem;
+    }
+
+    .stat .label {
+      margin: 0;
+      color: #7d6e5f;
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+    }
+
+    .stat .value {
+      margin: 0.22rem 0 0;
+      font-size: 1.1rem;
+      color: #2f2419;
+      font-weight: 700;
+    }
+
+    .topics {
+      margin-bottom: 1rem;
+    }
+
+    .topics h2 {
+      margin: 0 0 0.6rem;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .list-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 1rem;
+      margin: 1.1rem 0 0.6rem;
+    }
+
+    .list-head h2 {
+      margin: 0;
+      font-size: clamp(1.45rem, 2.5vw, 2rem);
+    }
+
+    .post-grid {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.8rem;
+    }
+
+    .post-card {
+      border: 1px solid #dac9af;
+      border-radius: 1rem;
+      background: #fffaf0;
+      padding: 1rem;
+      display: grid;
+      gap: 0.55rem;
+      box-shadow: 0 15px 36px -34px rgba(84, 49, 14, 0.5);
+    }
+
+    .post-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .post-date {
+      margin: 0;
+      font-size: 0.78rem;
+      color: #7f6f60;
+      font-weight: 600;
+    }
+
+    .post-tags {
+      display: flex;
+      gap: 0.35rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .post-title {
+      font-family: 'Newsreader', serif;
+      font-size: 1.32rem;
+      line-height: 1.24;
+      color: #201912;
+    }
+
+    .post-title:hover {
+      color: #7a420f;
+    }
+
+    .post-desc {
+      margin: 0;
+      color: #5a4f44;
+      font-size: 0.94rem;
+    }
+
+    .post-cta {
+      width: fit-content;
+      margin-top: 0.3rem;
+      border-radius: 999px;
+      border: 1px solid #c9a06d;
+      background: #fff;
+      padding: 0.35rem 0.75rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #884810;
+    }
+
+    .post-cta:hover {
+      background: #fff4e6;
+    }
+
+    @media (max-width: 900px) {
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .post-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .list-head {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
 </BlogLayout>
