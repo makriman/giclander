@@ -1,0 +1,32 @@
+---
+import { getCollection } from 'astro:content';
+import BlogLayout from '../../layouts/BlogLayout.astro';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft && data.lang === 'en')).sort((a, b) =>
+  b.data.publishDate.localeCompare(a.data.publishDate),
+);
+---
+
+<BlogLayout
+  title="Great Indian Company Blog"
+  description="Research summaries and explainers based on Indian policy and economic sources."
+  canonical="https://greatindiancompany.com/blog"
+>
+  <section class="card">
+    <h1>Insights</h1>
+    <p class="meta">{posts.length} published English articles</p>
+
+    <ul style="list-style:none; padding:0; margin:1rem 0 0; display:grid; gap:0.9rem;">
+      {
+        posts.map((post) => (
+          <li style="border:1px solid #2d2d2d; border-radius:12px; padding:1rem; background:#111;">
+            <a href={`/blog/${post.data.slug}`} style="font-size:1.03rem; font-weight:600;">
+              {post.data.title}
+            </a>
+            <p style="margin:0.45rem 0 0; color:#bdbdbd;">{post.data.description}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</BlogLayout>
