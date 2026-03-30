@@ -4,13 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && node scripts/generate-sitemap.mjs",
     "preview": "astro preview",
     "content:run": "node content-automation/scripts/run-content-pipeline.mjs",
     "content:expand:800": "node content-automation/scripts/expand-to-800-diverse.mjs"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.0.0",
     "astro": "^4.0.0"
   }
 }

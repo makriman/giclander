@@ -3,7 +3,8 @@ import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
 const ROOT = process.cwd();
-const BLOG_ROOT = path.join(ROOT, 'src', 'content', 'blog');
+const MASTER_ROOT = path.join(ROOT, 'src', 'content', 'blog', 'en');
+const TRANSLATION_ROOT = path.join(ROOT, 'content-automation', 'generated-translations');
 const CONFIG_ROOT = path.join(ROOT, 'content-automation', 'config');
 const STATE_ROOT = path.join(ROOT, 'content-automation', 'state');
 
@@ -128,7 +129,7 @@ function pickArray(frontmatter, key) {
 }
 
 async function scanExistingContent() {
-  const files = await listFilesRecursive(BLOG_ROOT);
+  const files = await listFilesRecursive(MASTER_ROOT);
   const markdownFiles = files.filter((filePath) => filePath.endsWith('.md') || filePath.endsWith('.mdx'));
   const index = [];
 
@@ -314,10 +315,10 @@ async function main() {
     'utf8',
   );
 
-  const publishRoot = path.join(BLOG_ROOT);
-  await ensureDir(path.join(publishRoot, 'en'));
+  const publishRoot = MASTER_ROOT;
+  await ensureDir(publishRoot);
   for (const lang of languages) {
-    await ensureDir(path.join(publishRoot, lang.code));
+    await ensureDir(path.join(TRANSLATION_ROOT, lang.code));
   }
 
   const sourceUrlsUsed = new Set();
@@ -382,7 +383,7 @@ async function main() {
     });
 
     const masterFileName = `${publishDate}-${slug}.md`;
-    const masterPath = path.join(publishRoot, 'en', masterFileName);
+    const masterPath = path.join(publishRoot, masterFileName);
     await fs.writeFile(masterPath, masterMarkdown, 'utf8');
 
     generatedSlugs.push(slug);
@@ -421,7 +422,7 @@ async function main() {
       });
 
       const fileName = `${publishDate}-${master.slug}-${lang.code}.md`;
-      const filePath = path.join(publishRoot, lang.code, fileName);
+      const filePath = path.join(TRANSLATION_ROOT, lang.code, fileName);
       await fs.writeFile(filePath, translationMarkdown, 'utf8');
 
       translationCount += 1;
@@ -441,7 +442,7 @@ async function main() {
   }
 
   for (const master of masters) {
-    const countForMaster = translationPaths.filter((p) => p.includes(`${master.slug}-`) && !p.includes('/en/')).length;
+    const countForMaster = translationPaths.filter((p) => p.includes(`${master.slug}-`)).length;
     if (countForMaster !== TRANSLATIONS_PER_MASTER) {
       failedItems.push(`translation-set-incomplete:${master.id}:${countForMaster}`);
     }

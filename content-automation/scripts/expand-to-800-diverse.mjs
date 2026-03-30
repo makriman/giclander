@@ -3,8 +3,8 @@ import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
 const ROOT = process.cwd();
-const BLOG_ROOT = path.join(ROOT, 'src', 'content', 'blog');
-const EN_ROOT = path.join(BLOG_ROOT, 'en');
+const MASTER_ROOT = path.join(ROOT, 'src', 'content', 'blog', 'en');
+const TRANSLATION_ROOT = path.join(ROOT, 'content-automation', 'generated-translations');
 const CONFIG_ROOT = path.join(ROOT, 'content-automation', 'config');
 const STATE_ROOT = path.join(ROOT, 'content-automation', 'state');
 
@@ -58,6 +58,31 @@ async function listMarkdownFiles(dir) {
   }
 }
 
+async function listMarkdownFilesRecursive(dir) {
+  const out = [];
+
+  async function walk(current) {
+    let entries = [];
+    try {
+      entries = await fs.readdir(current, { withFileTypes: true });
+    } catch {
+      return;
+    }
+
+    for (const entry of entries) {
+      const fullPath = path.join(current, entry.name);
+      if (entry.isDirectory()) {
+        await walk(fullPath);
+      } else if (entry.isFile() && entry.name.endsWith('.md')) {
+        out.push(fullPath);
+      }
+    }
+  }
+
+  await walk(dir);
+  return out;
+}
+
 function parseFrontmatter(raw) {
   const match = raw.match(/^---\n([\s\S]*?)\n---\n?/);
   if (!match) {
@@ -78,7 +103,7 @@ function pickField(frontmatter, key) {
 }
 
 async function getExistingMasters() {
-  const files = await listMarkdownFiles(EN_ROOT);
+  const files = await listMarkdownFiles(MASTER_ROOT);
   const masters = [];
 
   for (const filePath of files) {
@@ -280,9 +305,9 @@ async function main() {
   const sourceUrlsUsed = new Set();
 
   for (const lang of languages) {
-    await ensureDir(path.join(BLOG_ROOT, lang.code));
+    await ensureDir(path.join(TRANSLATION_ROOT, lang.code));
   }
-  await ensureDir(EN_ROOT);
+  await ensureDir(MASTER_ROOT);
 
   let createdMasters = 0;
   let createdTranslations = 0;
@@ -331,7 +356,7 @@ async function main() {
       privateLabel,
     });
 
-    const masterFile = path.join(EN_ROOT, `${publishDate}-${slug}.md`);
+    const masterFile = path.join(MASTER_ROOT, `${publishDate}-${slug}.md`);
     await fs.writeFile(masterFile, masterMarkdown, 'utf8');
     generatedMasterPaths.push(path.relative(ROOT, masterFile));
     generatedSlugs.push(slug);
@@ -353,20 +378,20 @@ async function main() {
         summaryType,
       });
 
-      const tFile = path.join(BLOG_ROOT, lang.code, `${publishDate}-${slug}-${lang.code}.md`);
+      const tFile = path.join(TRANSLATION_ROOT, lang.code, `${publishDate}-${slug}-${lang.code}.md`);
       await fs.writeFile(tFile, tMarkdown, 'utf8');
       generatedTranslationPaths.push(path.relative(ROOT, tFile));
       createdTranslations += 1;
     }
   }
 
-  const totalMastersAfter = (await listMarkdownFiles(EN_ROOT)).length;
-  const totalContentAfter = (await listMarkdownFiles(BLOG_ROOT)).length;
+  const totalMastersAfter = (await listMarkdownFiles(MASTER_ROOT)).length;
+  const totalTranslationsAfter = (await listMarkdownFilesRecursive(TRANSLATION_ROOT)).length;
 
   const perLanguageCounts = {};
-  const langDirs = ['en', ...languages.map((l) => l.code)];
-  for (const code of langDirs) {
-    perLanguageCounts[code] = (await listMarkdownFiles(path.join(BLOG_ROOT, code))).length;
+  perLanguageCounts.en = totalMastersAfter;
+  for (const code of languages.map((l) => l.code)) {
+    perLanguageCounts[code] = (await listMarkdownFiles(path.join(TRANSLATION_ROOT, code))).length;
   }
 
   const expectedTranslationsCreated = additionalMastersNeeded * TRANSLATIONS_PER_MASTER;
@@ -383,7 +408,7 @@ async function main() {
     failedItems.push(`final-master-count-mismatch:${totalMastersAfter}`);
   }
 
-  const totalAcrossLangDirs = Object.values(perLanguageCounts).reduce((a, b) => a + b, 0);
+  const totalAcrossLangDirs = totalMastersAfter + totalTranslationsAfter;
   if (totalAcrossLangDirs !== expectedTotalAfter) {
     failedItems.push(`final-total-count-mismatch:${totalAcrossLangDirs}`);
   }

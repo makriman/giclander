@@ -1,4 +1,4 @@
-# Great Indian Company Landing Page (Astro)
+# Great Indian Company (Astro)
 
 Pixel-faithful rebuild of [greatindiancompany.com](https://greatindiancompany.com) as a static Astro site.
 
@@ -11,6 +11,8 @@ The hero background video includes the brand/logo animation and the page uses mi
 - Vanilla JS (inline boot/animation sequence)
 - Google Fonts (`Montserrat` 600 normal + italic)
 - Inline SVG sprite icons
+- Markdown content collection for blog masters
+- Programmatic content generation scripts
 
 ## Quick Start
 
@@ -30,21 +32,41 @@ npm run preview
 
 Build output is generated as static files in `dist/`.
 
+The build also generates:
+
+- `dist/sitemap-index.xml`
+- `dist/sitemap-0.xml`
+
 ## Project Structure
 
 ```text
 .
 ├── astro.config.mjs
+├── content-automation/
+│   ├── config/
+│   ├── generated-translations/   # 22-language corpus (not loaded by Astro collection)
+│   ├── scripts/
+│   └── state/
 ├── package.json
 ├── public/
 │   ├── favicon.png
 │   └── assets/
 │       └── videos/
 │           └── bg.mp4
+├── scripts/
+│   └── generate-sitemap.mjs
 └── src/
+    ├── content/
+    │   └── blog/
+    │       └── en/               # English master articles rendered on /blog
+    ├── content.config.ts
     ├── layouts/
+    │   ├── BlogLayout.astro
     │   └── Layout.astro
     ├── pages/
+    │   ├── blog/
+    │   │   ├── [slug].astro
+    │   │   └── index.astro
     │   └── index.astro
     └── styles/
         └── global.css
@@ -57,6 +79,21 @@ Build output is generated as static files in `dist/`.
 - Main headline + social links: `src/pages/index.astro`
 - Global styling/responsive behavior: `src/styles/global.css`
 
+## Blog System
+
+- English blog index: `/blog`
+- English article route: `/blog/<slug>`
+- Current published master count target: `800`
+- Translation corpus: `17,600` markdown files across `22` Indian languages
+- Translation files are stored under `content-automation/generated-translations/*` so static builds stay memory-safe.
+
+### Generation Commands
+
+```bash
+npm run content:run
+npm run content:expand:800
+```
+
 ## SEO + Metadata
 
 Head tags are defined in `src/layouts/Layout.astro` and include:
@@ -65,6 +102,8 @@ Head tags are defined in `src/layouts/Layout.astro` and include:
 - Open Graph essentials
 - Twitter card metadata
 - Canonical URL + favicon tags
+
+Sitemap link is exposed at `/sitemap-index.xml`.
 
 ## Deploy
 
