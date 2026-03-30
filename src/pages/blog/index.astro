@@ -1,43 +1,13 @@
 ---
 import { getCollection } from 'astro:content';
 import BlogLayout from '../../layouts/BlogLayout.astro';
-import { promises as fs } from 'node:fs';
-import path from 'node:path';
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft && data.lang === 'en')).sort((a, b) =>
   b.data.publishDate.localeCompare(a.data.publishDate),
 );
 
-const TRANSLATION_ROOT = path.join(process.cwd(), 'content-automation', 'generated-translations');
-
-async function countTranslationFiles(root: string) {
-  let total = 0;
-  let dirs: fs.Dirent[] = [];
-
-  try {
-    dirs = await fs.readdir(root, { withFileTypes: true });
-  } catch {
-    return 0;
-  }
-
-  for (const dir of dirs) {
-    if (!dir.isDirectory()) {
-      continue;
-    }
-    const dirPath = path.join(root, dir.name);
-    let names: string[] = [];
-    try {
-      names = await fs.readdir(dirPath);
-    } catch {
-      continue;
-    }
-    total += names.filter((name) => name.endsWith('.md')).length;
-  }
-
-  return total;
-}
-
-const translationCount = await countTranslationFiles(TRANSLATION_ROOT);
+const translationFiles = import.meta.glob('/content-automation/generated-translations/**/*.md');
+const translationCount = Object.keys(translationFiles).length;
 ---
 
 <BlogLayout
