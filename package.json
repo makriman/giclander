@@ -5,11 +5,16 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build && node scripts/generate-sitemap.mjs",
-    "preview": "astro preview",
+    "preview": "npm run build && wrangler dev",
     "content:run": "node content-automation/scripts/run-content-pipeline.mjs",
-    "content:expand:800": "node content-automation/scripts/expand-to-800-diverse.mjs"
+    "content:expand:800": "node content-automation/scripts/expand-to-800-diverse.mjs",
+    "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "11",
     "astro": "^4.0.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.78.0"
   }
 }
