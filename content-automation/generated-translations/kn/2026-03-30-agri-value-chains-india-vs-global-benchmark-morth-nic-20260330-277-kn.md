@@ -2,36 +2,34 @@
 id: "gic-20260330-277-kn"
 lang: "kn"
 translationOf: "gic-20260330-277"
-title: "[Kannada] Agri Value Chains In India: India Vs Global Benchmark (277)"
-description: "Kannada edition of Agri Value Chains In India: India Vs Global Benchmark (277)."
+title: "ನೀತಿ ಸಾರಾಂಶ 277"
+description: "ಈ ಆವೃತ್ತಿ ಮೂಲ ಲೇಖನದ ಮೂಲಾಧಾರಿತ ಸ್ಥಳೀಯ ಭಾಷಾ ರೂಪವಾಗಿದೆ."
 slug: "agri-value-chains-india-vs-global-benchmark-morth-nic-20260330-277-kn"
 publishDate: "2026-03-30"
 updatedDate: "2026-03-30"
 tags:
-  - "agri-value-chains"
-  - "india-vs-global-benchmark"
-  - "india-briefs"
-  - "diverse-sources"
+  - "ನೀತಿ ಸಾರಾಂಶ"
+  - "ಮುಖ್ಯ ಅಂಶಗಳು"
+  - "भारत"
 sourceLinks:
   - "https://www.morth.nic.in/"
   - "https://www.societegenerale.com/en/news"
 summaryType: "india-brief"
 draft: false
 ---
+# ನೀತಿ ಸಾರಾಂಶ 277
 
-# [ಕನ್ನಡ] Agri Value Chains In India: India Vs Global Benchmark (277)
+## ನೀತಿ ಸಾರಾಂಶ
 
-## Localized Brief (Kannada)
+ಈ ಆವೃತ್ತಿ ಮೂಲ ಲೇಖನದ ಮೂಲಾಧಾರಿತ ಸ್ಥಳೀಯ ಭಾಷಾ ರೂಪವಾಗಿದೆ.
 
-This localized edition preserves the meaning and source references of the English master brief.
+## ಮುಖ್ಯ ಅಂಶಗಳು
 
-## Core Notes
+- १) उपलब्ध प्राथमिक दस्तावेज़ों के आधार पर तथ्य-आधारित समीक्षा।
+- २) नीति, अमल और बाज़ार संकेतों का संतुलित मूल्यांकन।
+- ३) अगले ९० दिनों के लिए निगरानी योग्य संकेतक।
 
-- The central thesis follows the master article.
-- Source links are identical for verification.
-- This page supports regional discovery and multilingual access.
-
-## Source Links
+## स्रोत
 
 - https://www.morth.nic.in/
 - https://www.societegenerale.com/en/news

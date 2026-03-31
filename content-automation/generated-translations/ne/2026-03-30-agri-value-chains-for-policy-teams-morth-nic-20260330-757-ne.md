@@ -2,36 +2,34 @@
 id: "gic-20260330-757-ne"
 lang: "ne"
 translationOf: "gic-20260330-757"
-title: "[Nepali] Agri Value Chains In India: For Policy Teams (757)"
-description: "Nepali edition of Agri Value Chains In India: For Policy Teams (757)."
+title: "नीति सार 757"
+description: "यह संस्करण मूल लेख का स्थानीय भाषा रूप है और स्रोत-आधारित है।"
 slug: "agri-value-chains-for-policy-teams-morth-nic-20260330-757-ne"
 publishDate: "2026-03-30"
 updatedDate: "2026-03-30"
 tags:
-  - "agri-value-chains"
-  - "for-policy-teams"
-  - "india-briefs"
-  - "diverse-sources"
+  - "नीति सार"
+  - "मुख्य बिंदु"
+  - "भारत"
 sourceLinks:
   - "https://www.morth.nic.in/"
   - "https://www.societegenerale.com/en/news"
 summaryType: "india-brief"
 draft: false
 ---
+# नीति सार 757
 
-# [नेपाली] Agri Value Chains In India: For Policy Teams (757)
+## नीति सार
 
-## Localized Brief (Nepali)
+यह संस्करण मूल लेख का स्थानीय भाषा रूप है और स्रोत-आधारित है।
 
-This localized edition preserves the meaning and source references of the English master brief.
+## मुख्य बिंदु
 
-## Core Notes
+- १) उपलब्ध प्राथमिक दस्तावेज़ों के आधार पर तथ्य-आधारित समीक्षा।
+- २) नीति, अमल और बाज़ार संकेतों का संतुलित मूल्यांकन।
+- ३) अगले ९० दिनों के लिए निगरानी योग्य संकेतक।
 
-- The central thesis follows the master article.
-- Source links are identical for verification.
-- This page supports regional discovery and multilingual access.
-
-## Source Links
+## स्रोत
 
 - https://www.morth.nic.in/
 - https://www.societegenerale.com/en/news

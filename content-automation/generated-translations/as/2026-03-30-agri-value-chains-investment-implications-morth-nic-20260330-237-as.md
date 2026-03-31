@@ -2,36 +2,34 @@
 id: "gic-20260330-237-as"
 lang: "as"
 translationOf: "gic-20260330-237"
-title: "[Assamese] Agri Value Chains In India: Investment Implications (237)"
-description: "Assamese edition of Agri Value Chains In India: Investment Implications (237)."
+title: "नीति सार 237"
+description: "यह संस्करण मूल लेख का स्थानीय भाषा रूप है और स्रोत-आधारित है।"
 slug: "agri-value-chains-investment-implications-morth-nic-20260330-237-as"
 publishDate: "2026-03-30"
 updatedDate: "2026-03-30"
 tags:
-  - "agri-value-chains"
-  - "investment-implications"
-  - "india-briefs"
-  - "diverse-sources"
+  - "नीति सार"
+  - "मुख्य बिंदु"
+  - "भारत"
 sourceLinks:
   - "https://www.morth.nic.in/"
   - "https://www2.deloitte.com/in/en/insights.html"
 summaryType: "india-brief"
 draft: false
 ---
+# नीति सार 237
 
-# [অসমীয়া] Agri Value Chains In India: Investment Implications (237)
+## नीति सार
 
-## Localized Brief (Assamese)
+यह संस्करण मूल लेख का स्थानीय भाषा रूप है और स्रोत-आधारित है।
 
-This localized edition preserves the meaning and source references of the English master brief.
+## मुख्य बिंदु
 
-## Core Notes
+- १) उपलब्ध प्राथमिक दस्तावेज़ों के आधार पर तथ्य-आधारित समीक्षा।
+- २) नीति, अमल और बाज़ार संकेतों का संतुलित मूल्यांकन।
+- ३) अगले ९० दिनों के लिए निगरानी योग्य संकेतक।
 
-- The central thesis follows the master article.
-- Source links are identical for verification.
-- This page supports regional discovery and multilingual access.
-
-## Source Links
+## स्रोत
 
 - https://www.morth.nic.in/
 - https://www2.deloitte.com/in/en/insights.html

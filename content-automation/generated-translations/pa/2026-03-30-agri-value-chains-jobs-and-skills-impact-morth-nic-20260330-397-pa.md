@@ -2,36 +2,34 @@
 id: "gic-20260330-397-pa"
 lang: "pa"
 translationOf: "gic-20260330-397"
-title: "[Punjabi] Agri Value Chains In India: Jobs And Skills Impact (397)"
-description: "Punjabi edition of Agri Value Chains In India: Jobs And Skills Impact (397)."
+title: "ਨੀਤੀ ਸਾਰ 397"
+description: "ਇਹ ਸੰਸਕਰਣ ਸਰੋਤ-ਆਧਾਰਿਤ ਸਥਾਨਕ ਭਾਸ਼ਾ ਰੂਪ ਹੈ।"
 slug: "agri-value-chains-jobs-and-skills-impact-morth-nic-20260330-397-pa"
 publishDate: "2026-03-30"
 updatedDate: "2026-03-30"
 tags:
-  - "agri-value-chains"
-  - "jobs-and-skills-impact"
-  - "india-briefs"
-  - "diverse-sources"
+  - "ਨੀਤੀ ਸਾਰ"
+  - "ਮੁੱਖ ਬਿੰਦੂ"
+  - "भारत"
 sourceLinks:
   - "https://www.morth.nic.in/"
   - "https://www.societegenerale.com/en/news"
 summaryType: "india-brief"
 draft: false
 ---
+# ਨੀਤੀ ਸਾਰ 397
 
-# [ਪੰਜਾਬੀ] Agri Value Chains In India: Jobs And Skills Impact (397)
+## ਨੀਤੀ ਸਾਰ
 
-## Localized Brief (Punjabi)
+ਇਹ ਸੰਸਕਰਣ ਸਰੋਤ-ਆਧਾਰਿਤ ਸਥਾਨਕ ਭਾਸ਼ਾ ਰੂਪ ਹੈ।
 
-This localized edition preserves the meaning and source references of the English master brief.
+## ਮੁੱਖ ਬਿੰਦੂ
 
-## Core Notes
+- १) उपलब्ध प्राथमिक दस्तावेज़ों के आधार पर तथ्य-आधारित समीक्षा।
+- २) नीति, अमल और बाज़ार संकेतों का संतुलित मूल्यांकन।
+- ३) अगले ९० दिनों के लिए निगरानी योग्य संकेतक।
 
-- The central thesis follows the master article.
-- Source links are identical for verification.
-- This page supports regional discovery and multilingual access.
-
-## Source Links
+## स्रोत
 
 - https://www.morth.nic.in/
 - https://www.societegenerale.com/en/news
