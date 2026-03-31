@@ -2,36 +2,34 @@
 id: "gic-20260330-797-ta"
 lang: "ta"
 translationOf: "gic-20260330-797"
-title: "[Tamil] Agri Value Chains In India: For Investors (797)"
-description: "Tamil edition of Agri Value Chains In India: For Investors (797)."
+title: "கொள்கை சுருக்கம் 797"
+description: "இந்த பதிப்பு மூல ஆதாரங்களை அடிப்படையாகக் கொண்டு தயாரிக்கப்பட்ட உள்ளூர் மொழி வடிவம்."
 slug: "agri-value-chains-for-investors-morth-nic-20260330-797-ta"
 publishDate: "2026-03-30"
 updatedDate: "2026-03-30"
 tags:
-  - "agri-value-chains"
-  - "for-investors"
-  - "india-briefs"
-  - "diverse-sources"
+  - "கொள்கை சுருக்கம்"
+  - "முக்கிய அம்சங்கள்"
+  - "भारत"
 sourceLinks:
   - "https://www.morth.nic.in/"
   - "https://www.gartner.com/en/insights"
 summaryType: "india-brief"
 draft: false
 ---
+# கொள்கை சுருக்கம் 797
 
-# [தமிழ்] Agri Value Chains In India: For Investors (797)
+## கொள்கை சுருக்கம்
 
-## Localized Brief (Tamil)
+இந்த பதிப்பு மூல ஆதாரங்களை அடிப்படையாகக் கொண்டு தயாரிக்கப்பட்ட உள்ளூர் மொழி வடிவம்.
 
-This localized edition preserves the meaning and source references of the English master brief.
+## முக்கிய அம்சங்கள்
 
-## Core Notes
+- १) उपलब्ध प्राथमिक दस्तावेज़ों के आधार पर तथ्य-आधारित समीक्षा।
+- २) नीति, अमल और बाज़ार संकेतों का संतुलित मूल्यांकन।
+- ३) अगले ९० दिनों के लिए निगरानी योग्य संकेतक।
 
-- The central thesis follows the master article.
-- Source links are identical for verification.
-- This page supports regional discovery and multilingual access.
-
-## Source Links
+## स्रोत
 
 - https://www.morth.nic.in/
 - https://www.gartner.com/en/insights

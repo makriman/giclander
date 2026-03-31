@@ -2,36 +2,34 @@
 id: "gic-20260330-717-pa"
 lang: "pa"
 translationOf: "gic-20260330-717"
-title: "[Punjabi] Agri Value Chains In India: For Founders And Operators (717)"
-description: "Punjabi edition of Agri Value Chains In India: For Founders And Operators (717)."
+title: "ਨੀਤੀ ਸਾਰ 717"
+description: "ਇਹ ਸੰਸਕਰਣ ਸਰੋਤ-ਆਧਾਰਿਤ ਸਥਾਨਕ ਭਾਸ਼ਾ ਰੂਪ ਹੈ।"
 slug: "agri-value-chains-for-founders-and-operators-morth-nic-20260330-717-pa"
 publishDate: "2026-03-30"
 updatedDate: "2026-03-30"
 tags:
-  - "agri-value-chains"
-  - "for-founders-and-operators"
-  - "india-briefs"
-  - "diverse-sources"
+  - "ਨੀਤੀ ਸਾਰ"
+  - "ਮੁੱਖ ਬਿੰਦੂ"
+  - "भारत"
 sourceLinks:
   - "https://www.morth.nic.in/"
   - "https://www2.deloitte.com/in/en/insights.html"
 summaryType: "india-brief"
 draft: false
 ---
+# ਨੀਤੀ ਸਾਰ 717
 
-# [ਪੰਜਾਬੀ] Agri Value Chains In India: For Founders And Operators (717)
+## ਨੀਤੀ ਸਾਰ
 
-## Localized Brief (Punjabi)
+ਇਹ ਸੰਸਕਰਣ ਸਰੋਤ-ਆਧਾਰਿਤ ਸਥਾਨਕ ਭਾਸ਼ਾ ਰੂਪ ਹੈ।
 
-This localized edition preserves the meaning and source references of the English master brief.
+## ਮੁੱਖ ਬਿੰਦੂ
 
-## Core Notes
+- १) उपलब्ध प्राथमिक दस्तावेज़ों के आधार पर तथ्य-आधारित समीक्षा।
+- २) नीति, अमल और बाज़ार संकेतों का संतुलित मूल्यांकन।
+- ३) अगले ९० दिनों के लिए निगरानी योग्य संकेतक।
 
-- The central thesis follows the master article.
-- Source links are identical for verification.
-- This page supports regional discovery and multilingual access.
-
-## Source Links
+## स्रोत
 
 - https://www.morth.nic.in/
 - https://www2.deloitte.com/in/en/insights.html

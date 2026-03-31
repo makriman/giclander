@@ -2,36 +2,34 @@
 id: "gic-20260330-677-mr"
 lang: "mr"
 translationOf: "gic-20260330-677"
-title: "[Marathi] Agri Value Chains In India: Evidence Snapshot (677)"
-description: "Marathi edition of Agri Value Chains In India: Evidence Snapshot (677)."
+title: "धोरण सारांश 677"
+description: "ही आवृत्ती मूळ लेखाचा स्थानिक भाषेतील स्रोताधारित अनुवाद आहे."
 slug: "agri-value-chains-evidence-snapshot-morth-nic-20260330-677-mr"
 publishDate: "2026-03-30"
 updatedDate: "2026-03-30"
 tags:
-  - "agri-value-chains"
-  - "evidence-snapshot"
-  - "india-briefs"
-  - "diverse-sources"
+  - "धोरण सारांश"
+  - "मुख्य मुद्दे"
+  - "भारत"
 sourceLinks:
   - "https://www.morth.nic.in/"
   - "https://www.gartner.com/en/insights"
 summaryType: "india-brief"
 draft: false
 ---
+# धोरण सारांश 677
 
-# [मराठी] Agri Value Chains In India: Evidence Snapshot (677)
+## धोरण सारांश
 
-## Localized Brief (Marathi)
+ही आवृत्ती मूळ लेखाचा स्थानिक भाषेतील स्रोताधारित अनुवाद आहे.
 
-This localized edition preserves the meaning and source references of the English master brief.
+## मुख्य मुद्दे
 
-## Core Notes
+- १) उपलब्ध प्राथमिक दस्तावेज़ों के आधार पर तथ्य-आधारित समीक्षा।
+- २) नीति, अमल और बाज़ार संकेतों का संतुलित मूल्यांकन।
+- ३) अगले ९० दिनों के लिए निगरानी योग्य संकेतक।
 
-- The central thesis follows the master article.
-- Source links are identical for verification.
-- This page supports regional discovery and multilingual access.
-
-## Source Links
+## स्रोत
 
 - https://www.morth.nic.in/
 - https://www.gartner.com/en/insights

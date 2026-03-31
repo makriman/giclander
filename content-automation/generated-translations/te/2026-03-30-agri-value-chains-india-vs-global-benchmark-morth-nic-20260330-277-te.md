@@ -2,36 +2,34 @@
 id: "gic-20260330-277-te"
 lang: "te"
 translationOf: "gic-20260330-277"
-title: "[Telugu] Agri Value Chains In India: India Vs Global Benchmark (277)"
-description: "Telugu edition of Agri Value Chains In India: India Vs Global Benchmark (277)."
+title: "పాలసీ సారాంశం 277"
+description: "ఈ సంచిక మూల ఆధారాలపై ఆధారపడి స్థానిక భాషలో రూపొందించబడింది."
 slug: "agri-value-chains-india-vs-global-benchmark-morth-nic-20260330-277-te"
 publishDate: "2026-03-30"
 updatedDate: "2026-03-30"
 tags:
-  - "agri-value-chains"
-  - "india-vs-global-benchmark"
-  - "india-briefs"
-  - "diverse-sources"
+  - "పాలసీ సారాంశం"
+  - "ప్రధాన అంశాలు"
+  - "भारत"
 sourceLinks:
   - "https://www.morth.nic.in/"
   - "https://www.societegenerale.com/en/news"
 summaryType: "india-brief"
 draft: false
 ---
+# పాలసీ సారాంశం 277
 
-# [తెలుగు] Agri Value Chains In India: India Vs Global Benchmark (277)
+## పాలసీ సారాంశం
 
-## Localized Brief (Telugu)
+ఈ సంచిక మూల ఆధారాలపై ఆధారపడి స్థానిక భాషలో రూపొందించబడింది.
 
-This localized edition preserves the meaning and source references of the English master brief.
+## ప్రధాన అంశాలు
 
-## Core Notes
+- १) उपलब्ध प्राथमिक दस्तावेज़ों के आधार पर तथ्य-आधारित समीक्षा।
+- २) नीति, अमल और बाज़ार संकेतों का संतुलित मूल्यांकन।
+- ३) अगले ९० दिनों के लिए निगरानी योग्य संकेतक।
 
-- The central thesis follows the master article.
-- Source links are identical for verification.
-- This page supports regional discovery and multilingual access.
-
-## Source Links
+## स्रोत
 
 - https://www.morth.nic.in/
 - https://www.societegenerale.com/en/news

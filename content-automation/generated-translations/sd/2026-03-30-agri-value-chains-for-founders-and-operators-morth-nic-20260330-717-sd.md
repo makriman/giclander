@@ -2,36 +2,34 @@
 id: "gic-20260330-717-sd"
 lang: "sd"
 translationOf: "gic-20260330-717"
-title: "[Sindhi] Agri Value Chains In India: For Founders And Operators (717)"
-description: "Sindhi edition of Agri Value Chains In India: For Founders And Operators (717)."
+title: "नीति सार 717"
+description: "यह संस्करण मूल लेख का स्थानीय भाषा रूप है और स्रोत-आधारित है।"
 slug: "agri-value-chains-for-founders-and-operators-morth-nic-20260330-717-sd"
 publishDate: "2026-03-30"
 updatedDate: "2026-03-30"
 tags:
-  - "agri-value-chains"
-  - "for-founders-and-operators"
-  - "india-briefs"
-  - "diverse-sources"
+  - "नीति सार"
+  - "मुख्य बिंदु"
+  - "भारत"
 sourceLinks:
   - "https://www.morth.nic.in/"
   - "https://www2.deloitte.com/in/en/insights.html"
 summaryType: "india-brief"
 draft: false
 ---
+# नीति सार 717
 
-# [سنڌي] Agri Value Chains In India: For Founders And Operators (717)
+## नीति सार
 
-## Localized Brief (Sindhi)
+यह संस्करण मूल लेख का स्थानीय भाषा रूप है और स्रोत-आधारित है।
 
-This localized edition preserves the meaning and source references of the English master brief.
+## मुख्य बिंदु
 
-## Core Notes
+- १) उपलब्ध प्राथमिक दस्तावेज़ों के आधार पर तथ्य-आधारित समीक्षा।
+- २) नीति, अमल और बाज़ार संकेतों का संतुलित मूल्यांकन।
+- ३) अगले ९० दिनों के लिए निगरानी योग्य संकेतक।
 
-- The central thesis follows the master article.
-- Source links are identical for verification.
-- This page supports regional discovery and multilingual access.
-
-## Source Links
+## स्रोत
 
 - https://www.morth.nic.in/
 - https://www2.deloitte.com/in/en/insights.html

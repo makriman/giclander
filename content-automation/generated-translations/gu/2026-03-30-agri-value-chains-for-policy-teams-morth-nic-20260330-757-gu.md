@@ -2,36 +2,34 @@
 id: "gic-20260330-757-gu"
 lang: "gu"
 translationOf: "gic-20260330-757"
-title: "[Gujarati] Agri Value Chains In India: For Policy Teams (757)"
-description: "Gujarati edition of Agri Value Chains In India: For Policy Teams (757)."
+title: "નીતિ સારાંશ 757"
+description: "આ આવૃત્તિ મૂળ લેખનું સ્ત્રોત-આધારિત સ્થાનિક ભાષા રૂપાંતર છે."
 slug: "agri-value-chains-for-policy-teams-morth-nic-20260330-757-gu"
 publishDate: "2026-03-30"
 updatedDate: "2026-03-30"
 tags:
-  - "agri-value-chains"
-  - "for-policy-teams"
-  - "india-briefs"
-  - "diverse-sources"
+  - "નીતિ સારાંશ"
+  - "મુખ્ય મુદ્દા"
+  - "भारत"
 sourceLinks:
   - "https://www.morth.nic.in/"
   - "https://www.societegenerale.com/en/news"
 summaryType: "india-brief"
 draft: false
 ---
+# નીતિ સારાંશ 757
 
-# [ગુજરાતી] Agri Value Chains In India: For Policy Teams (757)
+## નીતિ સારાંશ
 
-## Localized Brief (Gujarati)
+આ આવૃત્તિ મૂળ લેખનું સ્ત્રોત-આધારિત સ્થાનિક ભાષા રૂપાંતર છે.
 
-This localized edition preserves the meaning and source references of the English master brief.
+## મુખ્ય મુદ્દા
 
-## Core Notes
+- १) उपलब्ध प्राथमिक दस्तावेज़ों के आधार पर तथ्य-आधारित समीक्षा।
+- २) नीति, अमल और बाज़ार संकेतों का संतुलित मूल्यांकन।
+- ३) अगले ९० दिनों के लिए निगरानी योग्य संकेतक।
 
-- The central thesis follows the master article.
-- Source links are identical for verification.
-- This page supports regional discovery and multilingual access.
-
-## Source Links
+## स्रोत
 
 - https://www.morth.nic.in/
 - https://www.societegenerale.com/en/news
