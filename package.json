@@ -16,5 +16,15 @@
   },
   "devDependencies": {
     "wrangler": "^4.78.0"
+  },
+  "license": "MIT",
+  "description": "The Astro website and content automation system for Great Indian Company.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/greatindiancompany/greatindiancompany.git"
+  },
+  "homepage": "https://www.greatindiancompany.com",
+  "bugs": {
+    "url": "https://github.com/greatindiancompany/greatindiancompany/issues"
   }
 }

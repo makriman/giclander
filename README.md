@@ -1,117 +1,64 @@
-# Great Indian Company (Astro)
+# Great Indian Company Website
 
-Pixel-faithful rebuild of [greatindiancompany.com](https://greatindiancompany.com) as a static Astro site.
+The Astro website and content automation system for Great Indian Company.
 
-The hero background video includes the brand/logo animation and the page uses minimal JavaScript (vanilla, inline) for load and entry effects.
+Live: [https://www.greatindiancompany.com](https://www.greatindiancompany.com)
 
-## Stack
+## Mission
 
-- Astro (static output)
-- Plain global CSS (no Tailwind, no CSS modules)
-- Vanilla JS (inline boot/animation sequence)
-- Google Fonts (`Montserrat` 600 normal + italic)
-- Inline SVG sprite icons
-- Markdown content collection for blog masters
-- Programmatic content generation scripts
+Great Indian Company is an applied AI product lab from India for the world. The site exists to explain the company, publish useful market intelligence, and turn multilingual content automation into a durable public asset.
 
-## Quick Start
+## What This Repository Contains
+
+Astro static site for Great Indian Company with a large content automation pipeline, multilingual generated translations, source registries, thesis topics, sitemap generation, and Cloudflare-oriented deployment scripts.
+
+## Highlights
+
+- Company landing site with brand storytelling.
+- Content automation configs for languages, sources, and thesis topics.
+- Large multilingual generated content corpus.
+- Cloudflare deployment workflow and sitemap generation.
+
+## Tech Stack
+
+- Astro with Cloudflare adapter
+- Plain JavaScript content automation scripts
+- Generated Markdown translations
+- Wrangler deployment
+- Custom sitemap generation
+
+## Getting Started
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open your local URL shown by Astro (usually `http://localhost:4321`).
-
-## Build For Production
+## Quality Checks
 
 ```bash
 npm run build
-npm run preview
 ```
 
-Build output is generated as static files in `dist/`.
+## Repository Notes
 
-The build also generates:
+- Generated translations can be large; review content quality before publishing.
+- Keep source registries and thesis topics factual and current.
 
-- `dist/sitemap-index.xml`
-- `dist/sitemap-0.xml`
+## Contributing
 
-## Project Structure
+Contributions are welcome. The best contributions are specific, tested, and grounded in the product mission. Good places to help include documentation, accessibility, tests, bug reports, UI polish, data validation, and safer AI behavior.
 
-```text
-.
-├── astro.config.mjs
-├── content-automation/
-│   ├── config/
-│   ├── generated-translations/   # 22-language corpus (not loaded by Astro collection)
-│   ├── scripts/
-│   └── state/
-├── package.json
-├── public/
-│   ├── favicon.png
-│   └── assets/
-│       └── videos/
-│           └── bg.mp4
-├── scripts/
-│   └── generate-sitemap.mjs
-└── src/
-    ├── content/
-    │   └── blog/
-    │       └── en/               # English master articles rendered on /blog
-    ├── content.config.ts
-    ├── layouts/
-    │   ├── BlogLayout.astro
-    │   └── Layout.astro
-    ├── pages/
-    │   ├── blog/
-    │   │   ├── [slug].astro
-    │   │   └── index.astro
-    │   └── index.astro
-    └── styles/
-        └── global.css
-```
+Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
 
-## Content + Branding Notes
+## Security
 
-- Background video: `public/assets/videos/bg.mp4`
-- Favicon: `public/favicon.png`
-- Main headline + social links: `src/pages/index.astro`
-- Global styling/responsive behavior: `src/styles/global.css`
+Please do not open public issues for secrets, auth bypasses, data exposure, provider key leaks, or abuse vectors. Follow [SECURITY.md](SECURITY.md).
 
-## Blog System
+## Code of Conduct
 
-- English blog index: `/blog`
-- Article route (all languages): `/blog/<slug>`
-- Current published master count target: `800`
-- Translation corpus: `17,600` markdown files across `22` Indian languages
-- Translation files are stored under `content-automation/generated-translations/*` and rendered as live static routes during build.
+This project follows [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md). Be direct, kind, and useful.
 
-### Generation Commands
+## License
 
-```bash
-npm run content:run
-npm run content:expand:800
-```
-
-## SEO + Metadata
-
-Head tags are defined in `src/layouts/Layout.astro` and include:
-
-- Page title + description
-- Open Graph essentials
-- Twitter card metadata
-- Canonical URL + favicon tags
-
-Sitemap link is exposed at `/sitemap-index.xml`.
-
-## Deploy
-
-This project is static and can be deployed to any static host:
-
-- Cloudflare Pages
-- Netlify
-- Vercel (static output)
-- GitHub Pages (with Astro static build)
-
-Use `npm run build` and publish the `dist/` directory.
+MIT. See [LICENSE](LICENSE).
