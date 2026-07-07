@@ -25,7 +25,6 @@ import Layout from '../layouts/Layout.astro';
 
   <div id="bg">
     <video
-      src="/assets/videos/bg.mp4"
       autoplay
       muted
       loop
@@ -33,7 +32,10 @@ import Layout from '../layouts/Layout.astro';
       preload="auto"
       disablepictureinpicture
       webkit-playsinline
-    ></video>
+      aria-hidden="true"
+    >
+      <source src="/assets/videos/bg.mp4" type="video/mp4" />
+    </video>
   </div>
 
   <div id="loader"></div>
@@ -98,7 +100,56 @@ import Layout from '../layouts/Layout.astro';
         }, 100);
       };
 
+      function setViewportHeight() {
+        const height = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+        document.documentElement.style.setProperty('--viewport-height', height + 'px');
+        document.documentElement.style.setProperty('--background-height', height + 'px');
+      }
+
+      function playAmbientVideos() {
+        const videos = document.querySelectorAll('#bg video');
+
+        videos.forEach(function (video) {
+          video.muted = true;
+          video.defaultMuted = true;
+          video.playsInline = true;
+          video.setAttribute('muted', '');
+          video.setAttribute('playsinline', '');
+          video.setAttribute('webkit-playsinline', '');
+          video.removeAttribute('controls');
+
+          const attempt = video.play();
+
+          if (attempt && typeof attempt.catch === 'function') {
+            attempt.catch(function () {});
+          }
+        });
+      }
+
+      setViewportHeight();
+      playAmbientVideos();
+
       window.addEventListener('load', onLoad);
+      window.addEventListener('load', playAmbientVideos);
+      window.addEventListener('pageshow', playAmbientVideos);
+      window.addEventListener('resize', setViewportHeight);
+      window.addEventListener('orientationchange', function () {
+        setTimeout(setViewportHeight, 250);
+        setTimeout(playAmbientVideos, 250);
+      });
+
+      if (window.visualViewport) {
+        window.visualViewport.addEventListener('resize', setViewportHeight);
+      }
+
+      document.addEventListener('visibilitychange', function () {
+        if (!document.hidden) {
+          playAmbientVideos();
+        }
+      });
+
+      document.addEventListener('pointerdown', playAmbientVideos, { once: true, passive: true });
+      document.addEventListener('touchstart', playAmbientVideos, { once: true, passive: true });
 
       function triggerEntryAnimations() {
         const text = document.getElementById('text01');
@@ -132,16 +183,6 @@ import Layout from '../layouts/Layout.astro';
           });
         }
       }
-
-      window.addEventListener('load', function () {
-        const videos = document.querySelectorAll('#bg video[autoplay]');
-
-        videos.forEach(function (v) {
-          if (v.paused) {
-            v.play();
-          }
-        });
-      });
     })();
   </script>
 </Layout>

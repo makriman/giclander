@@ -164,11 +164,17 @@ body.is-loading::after {
 #bg video {
   bottom: 0;
   height: 100%;
+  left: 0;
+  min-height: 100%;
+  min-width: 100%;
   object-fit: cover;
   object-position: center;
   position: absolute;
+  right: 0;
   top: 0;
+  transform: translateZ(0);
   width: 100%;
+  will-change: transform;
 }
 
 #wrapper {
