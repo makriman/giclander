@@ -161,6 +161,26 @@ body.is-loading::after {
   background-repeat: no-repeat;
 }
 
+#bg .mobile-bg-animation {
+  bottom: 0;
+  display: none;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+#bg .mobile-bg-animation img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
 #bg video {
   bottom: 0;
   height: 100%;
@@ -175,6 +195,16 @@ body.is-loading::after {
   transform: translateZ(0);
   width: 100%;
   will-change: transform;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  #bg .mobile-bg-animation {
+    display: block;
+  }
+
+  #bg video {
+    display: none;
+  }
 }
 
 #wrapper {
